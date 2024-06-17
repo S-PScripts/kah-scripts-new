@@ -35,8 +35,12 @@ local function regen()
 end
 
 -- VARIABLES --
+
 getgenv().antigear = false -- No one except you can use gears with this on
 getgenv().anticrash = true -- No one except you can crash the servers (gears only)
+
+-- LocalPlayer variable --
+local lplr = game:GetService("Players").LocalPlayer
 
 -- LISTS --
 
@@ -48,12 +52,13 @@ getgenv().crashTools = {
 	"Emerald Knights of the Seventh Sanctum Sword and Shield"
 }
 
+special = {}
+
 -- People whitelisted from antigear/anticrash --
 special.gearwhitelisted = {"ScriptingProgrammer", "kevin3050ti"}
 
 -- People blacklisted from using gears --
 special.gearbanned = {}
-
 
 -- Connections --
 getgenv().connections = {}
